@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized T-Shirt Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        select {
+            background-color: #f9f9f9;
+        }
+
+        select option {
+            padding: 8px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .color-preview {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/submit-order" method="POST">
+        <h1>Place Your Order</h1>
+
+        <fieldset>
+            <legend>Shirt Details</legend>
+
+            <label for="tagline">Tagline on the Shirt:</label>
+            <input type="text" id="tagline" name="tagline" required>
+
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value="" disabled selected>Select a color</option>
+                <option value="red">
+                    <span class="color-preview" style="background-color: red;"></span>Red
+                </option>
+                <option value="blue">
+                    <span class="color-preview" style="background-color: blue;"></span>Blue
+                </option>
+                <option value="green">
+                    <span class="color-preview" style="background-color: green;"></span>Green
+                </option>
+                <option value="black">
+                    <span class="color-preview" style="background-color: black;"></span>Black
+                </option>
+                <option value="white">
+                    <span class="color-preview" style="background-color: white; border: 1px solid #ccc;"></span>White
+                </option>
+            </select>
+
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="" disabled selected>Select a size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">X-Large</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="delivery-date">Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Delivery Details</legend>
+
+            <label for="name">Recipient's Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Comments</legend>
+
+            <label for="comments">Comments or Special Instructions:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Place Order">
+    </form>
+
+</body>
+</html>
