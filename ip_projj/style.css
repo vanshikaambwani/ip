@@ -1,0 +1,155 @@
+/* External CSS Inclusion */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background for the whole page */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50; /* Base green color */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+}
+
+.header-content .logo {
+    max-width: 50px; /* Adjusted logo size */
+    margin-right: 20px; /* Space between logo and text */
+    border-radius: 20%; /* Circular logo */
+}
+
+.header-content h1 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Profile Section */
+.profile {
+    background-color: #ffffff; /* White background for the profile section */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adding a background shade to the profile section */
+.profile::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05); /* Light overlay shade */
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.profile h2 {
+    border-bottom: 2px solid #4CAF50; /* Green color for the underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile ul li {
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Border around list items */
+    border-radius: 8px; /* Rounded corners for list items */
+    padding: 10px; /* Padding inside list items */
+    background-color: #f9f9f9; /* Light grey background for list items */
+}
+
+/* Contact Section */
+.contact {
+    background-color: #e8f5e9; /* Light green background for the contact section */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    border-bottom: 2px solid #4CAF50; /* Green color for the underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    color: #4CAF50;
+    text-decoration: none;
+    border-bottom: 1px solid #4CAF50; /* Underline for links */
+    border-radius: 3px; /* Rounded corners for link underline */
+    padding-bottom: 2px; /* Space between text and underline */
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Dark grey background for the footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 15px 15px 0 0; /* Rounded top corners */
+}
+
+/* Pseudo-elements */
+.profile::before {
+    content: 'Profile Information';
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.contact::after {
+    content: 'Get in Touch!';
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-top: 20px;
+}
+
+/* Pseudo-classes */
+header h1:hover {
+    color: #d4e157; /* Lighter shade of green for hover effect */
+}
+
+.profile li:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey background for even list items */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.header-content .logo {
+    max-width: 150px; /* Increased logo size */
+    margin-right: 20px; /* Adjusted space between logo and text */
+    border-radius: 20%; /* Circular logo */
+}
